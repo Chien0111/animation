@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  color: white;
+}
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+.ring {
+  position: absolute;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.ring::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border-radius: 50%;
+  animation: ring 0.5s infinite;
+}
+
+@keyframes ring {
+  0% {
+    transform: rotate(0deg);
+    box-shadow: 1px 5px 2px red;
+  }
+  25% {
+    transform: rotate(60deg);
+    box-shadow: 1px 5px 2px rgb(255, 251, 13);
+  }
+  50% {
+    transform: rotate(180deg);
+    box-shadow: 1px 5px 2px rgb(24, 120, 247);
+  }
+  75% {
+    transform: rotate(240deg);
+    box-shadow: 1px 5px 2px rgb(14, 255, 106);
+  }
+  100% {
+    transform: rotate(360deg);
+    box-shadow: 1px 5px 2px rgb(255, 254, 254);
+  }
+}
